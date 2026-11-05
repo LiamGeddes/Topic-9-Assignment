@@ -31,8 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnGood = new System.Windows.Forms.Button();
             this.btnBad = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.imgGood = new System.Windows.Forms.PictureBox();
+            this.imgBad = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.imgGood)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgBad)).BeginInit();
             this.SuspendLayout();
             // 
             // btnGood
@@ -53,27 +55,43 @@
             this.btnBad.Text = "Bad";
             this.btnBad.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // imgGood
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(62, 213);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.imgGood.Image = ((System.Drawing.Image)(resources.GetObject("imgGood.Image")));
+            this.imgGood.Location = new System.Drawing.Point(62, 213);
+            this.imgGood.Name = "imgGood";
+            this.imgGood.Size = new System.Drawing.Size(100, 50);
+            this.imgGood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgGood.TabIndex = 2;
+            this.imgGood.TabStop = false;
+            this.imgGood.Visible = false;
+            this.imgGood.Click += new System.EventHandler(this.imgGood_Click);
+            // 
+            // imgBad
+            // 
+            this.imgBad.Image = ((System.Drawing.Image)(resources.GetObject("imgBad.Image")));
+            this.imgBad.Location = new System.Drawing.Point(225, 213);
+            this.imgBad.Name = "imgBad";
+            this.imgBad.Size = new System.Drawing.Size(100, 50);
+            this.imgBad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgBad.TabIndex = 3;
+            this.imgBad.TabStop = false;
+            this.imgBad.Visible = false;
+            this.imgBad.Click += new System.EventHandler(this.imgBad_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.imgBad);
+            this.Controls.Add(this.imgGood);
             this.Controls.Add(this.btnBad);
             this.Controls.Add(this.btnGood);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgGood)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgBad)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -82,7 +100,8 @@
 
         private System.Windows.Forms.Button btnGood;
         private System.Windows.Forms.Button btnBad;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox imgGood;
+        private System.Windows.Forms.PictureBox imgBad;
     }
 }
 
