@@ -17,16 +17,20 @@ namespace Topic_9_Assignment
             InitializeComponent();
         }
 
-        private void imgGood_Click(object sender, EventArgs e)
+        
+
+        private void btnGood_Click(object sender, EventArgs e)
         {
             imgGood.Visible = true;
             imgBad.Visible = false;
         }
 
-        private void imgBad_Click(object sender, EventArgs e)
+        private void btnBad_Click(object sender, EventArgs e)
         {
             imgGood.Visible = false;
             imgBad.Visible = true;
         }
+
+        
     }
 }
